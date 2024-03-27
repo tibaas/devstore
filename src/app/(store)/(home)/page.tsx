@@ -22,7 +22,7 @@ export default async function Home() {
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
       <Link
         href={`/product/${highlightedProduct.slug}`}
-        className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 flex justify-center items-end"
+        className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 flex justify-center items-center"
       >
         <Image
           src={highlightedProduct.image}
@@ -50,13 +50,13 @@ export default async function Home() {
           <Link
             key={product.id}
             href={`/product/${highlightedProduct.slug}`}
-            className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 flex justify-center items-end"
+            className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 flex justify-center items-center"
           >
             <Image
               src={product.image}
               className="group-hover:scale-105 transition-transform duration-500"
-              width={920}
-              height={920}
+              width={420}
+              height={420}
               quality={100}
               alt=""
             />
@@ -74,7 +74,6 @@ export default async function Home() {
           </Link>
         )
       })}
-      <span> </span>
     </div>
   )
 }
